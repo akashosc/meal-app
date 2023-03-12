@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --pri:#191825;
+    --sec:#2B3467;
+    --third:#EB455F;
+}
+body{
+    background-color: #BAD7E9;
+}
+/* header-section */
+.header{
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+.logo-intro{
+    display: flex;
+    padding: 1.5rem;
+}
+.logo-intro i{
+    font-size: 3rem;
+    padding-right: 1rem;
+}
+.logo{
+    
+text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+0px -4px 10px rgba(255,255,255,0.3);
+}
+.navbar{
+    color: white;
+    background-color: var(--pri);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 2rem;
+}
+.fa-shopping-cart{
+    color: #4E6E81;
+    /* color: #121212; */
+
+text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+}
+.navbar .input{
+    padding-right: 1rem;
+    display: flex;
+    background-color:#BAD7E9 ;
+    width: 30%;
+    height: 2.3rem;
+    border-radius: 1.2rem;
+    align-items: center;
+}
+.input label{
+   font-size: 1.5rem;
+   color: black;
+}
+.navbar .input input{
+     width: 100%;
+     height: 100%;
+     border: 0px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    padding-left: 1rem;  
+    border-radius: 1.4rem;
+    outline: none;
+}
+.favriot{
+    background-color:#BAD7E9 ;
+    border: 0px solid;
+     border-radius: 3rem;
+     color: black;
+    padding: 0.3rem 0.5rem;
+    font-size: 1.5rem;
+}
+.favriot i{
+    color: #EB455F;
+    font-size: 2rem;
+}
+
+/* header-section */
+
+
+/* main-meal-section */
+
+.main-se{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #EB455F;
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+    justify-content: center;
+   
+}
+.card-meal{
+    
+    border-radius: 1.5rem;
+    border: 1px solid;
+    width: 300px;
+    padding: 1.2rem;
+    margin: 1rem;
+    
+}
+.card-meal h4{
+    color: #BAD7E9;
+}
+.card-meal h3{
+    color:black;
+    font-size: 1.7rem;
+    padding:1.6rem 0rem;
+    font-weight: bold; 
+}
+.favb{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+.favb h4,button{
+    margin:0.2rem 0.2rem;
+}
+.fav-btn{
+     background-color:#EB455F;
+    color: white;
+}
+.fav-btn1{
+    background-color: #2B3467;
+}
+.redmake{
+    background-color:gray;
+    color: blue;
+}
+
+.imag-main{
+    width: 100%;
+    height: 300px;
+}
+/* details-section */
+.details{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+.img-para{
+   display: flex;
+   justify-content: center;
+}
+.img-para img{
+    border-radius: 1rem;
+    width: 50%;
+    height: 70%;
+}
+.img-para div{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.img-para div h1{
+    font-size: 3.4rem;
+    font-weight: bold;
+   color: #BAD7E9;
+}
+.img-para div h3{
+    font-size: 1.7rem;
+    font-weight: bold;
+   color: #BAD7E9;
+}
+.img-para div p{
+    font-size: 1.2rem;
+    color:whitesmoke;
+}
+
+/* details-section */
+
+/* main-meal-section */
+
+
+/* faveroit section css */
+.fav-div{
+    position: fixed;
+    top:120px;
+    right:0;
+    background-color: #2C3333;
+    width: 600px;
+    max-height: 500px;
+    display: flex;
+    display:none;
+    flex-direction: column;
+   border: 2px solid;
+ 
+    overflow-y: auto;
+   overflow-x: hidden;
+}
+.fav-div1{
+    position: fixed;
+    top:160px;
+    right:0;
+    background-color: lightgray;
+    width: 900px;
+    max-height:500px;
+    display: flex;
+    /* display:none; */
+    flex-direction: column;
+   border: 2px solid;
+ 
+    overflow-y: auto;
+   overflow-x: hidden;
+}
+.fav-item{
+    background-color: #2B3467;
+    display: flex;
+   height: 200px;
+    width: 92%;
+    padding: 1.2rem 1rem;
+    /* border: 5px solid; */
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 1.2rem;
+   
+}
+.image-fav{
+     height: 100%;
+     border-radius: 3rem;
+}
+.fav-item img,div,i{
+   margin: 1rem 1rem;
+}
+.fav-item i{
+  font-size: 2rem;
+  color: red;
+}
+.fav-item  div{
+    display: flex;
+    flex-direction: column;
+  justify-content: space-around;
+}
+.fav-item  div h3{
+    color: #ECF2FF;
+}
+.fav-item  div h5{
+    color: red;
+}
+
+
+
+/* faveroit section css */
