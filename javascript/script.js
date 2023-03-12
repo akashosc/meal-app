@@ -168,6 +168,7 @@ function showdetailsname(ip){
         return 'error';
     })
 }
+
 const form=document.getElementById('input');
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
@@ -176,14 +177,14 @@ form.addEventListener('submit',(e)=>{
     
     const urlforsearchinput='https://www.themealdb.com/api/json/v1/1/search.php?s='+searchterm;
     showdetailsname(urlforsearchinput);
-    console.log(urlforsearchinput)
-    fetch(urlforsearchinput)
-    .then(response => response.json())
-    .then(function(data){
-       
-    })  
      
 })
+function searchonclick(){
+    const searchterm=inputbox.value;
+    
+    const urlforsearchinput='https://www.themealdb.com/api/json/v1/1/search.php?s='+searchterm;
+    showdetailsname(urlforsearchinput);
+}
 // on-search-meals//
 
 
