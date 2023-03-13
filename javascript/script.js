@@ -1,18 +1,7 @@
 const url='https://www.themealdb.com/api/json/v1/1/search.php?f=b';
 const urls='https://www.themealdb.com/api/json/v1/1/search.php?s=';
-let favirot_item=[];
-function ispresent(id){
-    for(let i=0;i<favirot_item.length;i++){
-        if(id==favirot_item[i].idMeal){
-            return true;
-        }
-    }
-    return false;
-}
-function show_click_on_fav(){
 
-}
-
+// showing tha card of all meals on the main section
 showingdisplay(url);
 function showdetails(ip){
     const dumip='https://www.themealdb.com/api/json/v1/1/lookup.php?i='+ip;
@@ -68,6 +57,23 @@ function showingdisplay(ip){
       })
      
 }
+
+
+// showing tha card of all meals on the main section
+
+// all actions on the fav section is taking place in thai section of code removing, adding, and mantain the main section
+
+
+let favirot_item=[];
+function ispresent(id){
+    for(let i=0;i<favirot_item.length;i++){
+        if(id==favirot_item[i].idMeal){
+            return true;
+        }
+    }
+    return false;
+}
+
 function removethingforclick(id){
     const newfav=favirot_item.filter(function(ele){
         return id!=ele.idMeal;
@@ -148,9 +154,10 @@ function addcolor_fav1(id){
 // fav-btn-section
 
 
+// all actions on the fav section is taking place in thai section of code removing, adding, and mantain the main section
 
 
-// on-search-meals//
+// on-search-meals  search results are going to take place in this only//
 const inputbox=document.getElementById('search');
 function myFunction(){
     const mainadd=document.querySelector('#main-se');
@@ -202,7 +209,9 @@ function searchonclick(){
     const urlforsearchinput='https://www.themealdb.com/api/json/v1/1/search.php?s='+searchterm;
     showdetailsname(urlforsearchinput);
 }
-// on-search-meals//
+
+// on-search-meals  search results are going to take place in this only//
+
 
 
 
