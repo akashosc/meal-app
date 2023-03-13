@@ -41,7 +41,7 @@ function showdetails(ip){
     })
 }
 function showingdisplay(ip){
-    
+       
       fetch(ip)
       .then(response => response.json())
       .then(function(data){
@@ -68,16 +68,23 @@ function showingdisplay(ip){
       })
      
 }
-
+function removethingforclick(id){
+    const newfav=favirot_item.filter(function(ele){
+        return id!=ele.idMeal;
+   })
+   favirot_item=newfav;
+   showingfavitem();
+}
 
 function removething(id){
     const newfav=favirot_item.filter(function(ele){
          return id!=ele.idMeal;
     })
-    favirot_item=newfav;
+    favirot_item=newfav;   
     addcolor_fav(id)
     showingfavitem();
-    //  addcolor_fav(id);
+   
+    
 }
 function showallclick(id){
     addcolor_fav(id);
@@ -120,16 +127,17 @@ function showingfavitem(){
        <div class="fav-div-sett"><h3>${favirot_item[i].strMeal}</h3>
          
       </div>
-       <i class="fa fa-trash"  onclick="removething(${favirot_item[i].idMeal})"></i>`
+    <i class="fa fa-trash"  onclick="removethingforclick(${favirot_item[i].idMeal});removething(${favirot_item[i].idMeal})"></i>`
        addthat.append(newitem);
    }
 }
 
 // fav-btn-section
 function addcolor_fav(id){
+     
      const addo=document.getElementById(id);
      addo.classList.toggle('fav-btn1');
-    
+   
 }
 function addcolor_fav1(id){
     const addo=document.getElementById(id);

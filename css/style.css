@@ -35,7 +35,7 @@ text-shadow: 2px 7px 5px rgba(0,0,0,0.3),
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0px 2rem;
+    padding:0px 3rem;
 }
 .fa-shopping-cart{
     color: #4E6E81;
@@ -49,7 +49,7 @@ text-shadow: 2px 7px 5px rgba(0,0,0,0.3),
     display: flex;
     background-color:#BAD7E9 ;
     width: 30%;
-    height: 2.3rem;
+    height: 3.3rem;
     border-radius: 1.2rem;
     align-items: center;
 }
@@ -89,7 +89,7 @@ text-shadow: 2px 7px 5px rgba(0,0,0,0.3),
     display: flex;
     flex-wrap: wrap;
     background-color: #EB455F;
-    padding-top: 10rem;
+    padding-top: 12rem;
     padding-bottom: 3rem;
     justify-content: center;
    
