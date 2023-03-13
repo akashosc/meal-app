@@ -1,8 +1,17 @@
 const url='https://www.themealdb.com/api/json/v1/1/search.php?f=b';
 const urls='https://www.themealdb.com/api/json/v1/1/search.php?s=';
+let favirot_item=[];
+function ispresent(id){
+    for(let i=0;i<favirot_item.length;i++){
+        if(id==favirot_item[i].idMeal){
+            return true;
+        }
+    }
+    return false;
+}
+function show_click_on_fav(){
 
-
-
+}
 
 showingdisplay(url);
 function showdetails(ip){
@@ -20,7 +29,10 @@ function showdetails(ip){
         <img src="${ar[0].strMealThumb}" alt="">
         <div><h1>${ar[0].strMeal}</h1>
           <h3>How to make</h3>
-        <p>${ar[0].strInstructions}</p> </div>
+        <p>${ar[0].strInstructions}</p> 
+        <button  style="padding: 1.3rem; background-color: #2B3467;"onclick="showingdisplay(url)" class="fav-btn">back</button>
+        </div>
+        
       </div>
   </div>
       `
@@ -33,12 +45,10 @@ function showingdisplay(ip){
       fetch(ip)
       .then(response => response.json())
       .then(function(data){
-       
-        const meal=data.meals;
+         const meal=data.meals;
         const mainsec=document.querySelector('#main-se');
         mainsec.innerHTML='';
-        for(let i=0;i<meal.length;i++){
-           
+        for(let i=0;i<meal.length;i++){    
         const cards=document.createElement('div');
         cards.classList.add('card-meal');
         cards.setAttribute('id','${meal[i].idMeal}');
@@ -59,21 +69,15 @@ function showingdisplay(ip){
      
 }
 
-let favirot_item=[];
-function ispresent(id){
-    for(let i=0;i<favirot_item.length;i++){
-        if(id==favirot_item[i].idMeal){
-            return true;
-        }
-    }
-    return false;
-}
+
 function removething(id){
     const newfav=favirot_item.filter(function(ele){
          return id!=ele.idMeal;
     })
     favirot_item=newfav;
+    addcolor_fav(id)
     showingfavitem();
+    //  addcolor_fav(id);
 }
 function showallclick(id){
     addcolor_fav(id);
@@ -99,8 +103,10 @@ function showallclick(id){
 function addclass(){
    const k= document.querySelector('#fav-div');
    showingfavitem();
-     k.classList.toggle('fav-div1');
-    
+   if(favirot_item.length>0){
+    k.classList.toggle('fav-div1');  
+   }
+     
 }
 
 function showingfavitem(){
@@ -122,7 +128,8 @@ function showingfavitem(){
 // fav-btn-section
 function addcolor_fav(id){
      const addo=document.getElementById(id);
-    addo.classList.toggle('fav-btn1');
+     addo.classList.toggle('fav-btn1');
+    
 }
 function addcolor_fav1(id){
     const addo=document.getElementById(id);
@@ -141,7 +148,7 @@ function myFunction(){
     const mainadd=document.querySelector('#main-se');
     
     const filter=inputbox.value;
-    const urls='https://www.themealdb.com/api/json/v1/1/search.php?f=';
+    const urls='https://www.themealdb.com/api/json/v1/1/search.php?s=';
     const newurl=urls+filter;
     mainadd.innerHTML='';
     showingdisplay(newurl);  
@@ -160,7 +167,9 @@ function showdetailsname(ip){
         <img src="${ar[0].strMealThumb}" alt="">
         <div><h1>${ar[0].strMeal}</h1>
           <h3>How to make</h3>
-        <p>${ar[0].strInstructions}</p> </div>
+        <p>${ar[0].strInstructions}</p>
+        <button  style="padding: 1.3rem; background-color: #2B3467;"onclick="showingdisplay(url)" class="fav-btn">back</button>
+        </div>
       </div>
   </div>
       `
